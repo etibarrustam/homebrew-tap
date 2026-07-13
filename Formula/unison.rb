@@ -1,8 +1,8 @@
 class Unison < Formula
   desc "Play sound through every speaker at once, control volume and brightness everywhere"
   homepage "https://github.com/etibarrustam/Unison"
-  url "https://github.com/etibarrustam/Unison/archive/refs/tags/v0.1.4.tar.gz"
-  sha256 "6a74294fda2337082712f2d83ebfd2f3f98d822039a1ed39e0df9be032714089"
+  url "https://github.com/etibarrustam/Unison/archive/refs/tags/v0.1.5.tar.gz"
+  sha256 "8395ecc10715eb8861b304d0dac76da0ca7905df5c915ec43ed653de51d6b28e"
   license "MIT"
   head "https://github.com/etibarrustam/Unison.git", branch: "main"
 
