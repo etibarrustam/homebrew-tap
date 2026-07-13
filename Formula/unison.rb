@@ -1,8 +1,8 @@
 class Unison < Formula
   desc "Play sound through every speaker at once, control volume and brightness everywhere"
   homepage "https://github.com/etibarrustam/Unison"
-  url "https://github.com/etibarrustam/Unison/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "eff79eee0eeaaf36f9b1a40d00e3404aaf801b4170fa98c033446f174f25a863"
+  url "https://github.com/etibarrustam/Unison/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "f801df0d8fbd44ca790339073b7360e216d1018cad0aaaada47130cea2dabbda"
   license "MIT"
   head "https://github.com/etibarrustam/Unison.git", branch: "main"
 
@@ -10,6 +10,7 @@ class Unison < Formula
 
   def install
     ENV["CONFIG"] = "release"
+    ENV["SWIFT_FLAGS"] = "--disable-sandbox"
     system "./Scripts/build-app.sh"
     prefix.install "build/Unison.app"
   end
