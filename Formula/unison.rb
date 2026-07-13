@@ -15,16 +15,26 @@ class Unison < Formula
     prefix.install "build/Unison.app"
   end
 
+  def post_install
+    # A formula cannot ship straight into /Applications, but nobody looks
+    # for an app inside the Cellar. Copy it where apps live.
+    app = Pathname("/Applications/Unison.app")
+    app.rmtree if app.exist?
+    cp_r prefix/"Unison.app", "/Applications/"
+  end
+
   def caveats
     <<~EOS
-      Copy the app to your Applications folder and open it:
-        cp -R "#{opt_prefix}/Unison.app" /Applications/
+      Unison was copied to /Applications. Start it with:
         open /Applications/Unison.app
 
       macOS will ask for two permissions on first launch:
       Accessibility for the volume and brightness keys, and
       System Audio Recording for playing through several devices.
       Unison never uses the microphone.
+
+      brew uninstall does not touch /Applications/Unison.app;
+      delete it there as well if you remove Unison.
     EOS
   end
 
