@@ -1,6 +1,6 @@
 cask "unison" do
-  version "0.2.1"
-  sha256 "b693af5a008de94874679dd2b43035a95439b0f10e6f8e45c9f6eebd75527279"
+  version "0.2.2"
+  sha256 "cf5f2fc6df093183d0ad0c8f30631f8fd2f43ca616e03387236c55dca83f1b22"
 
   url "https://github.com/etibarrustam/Unison/archive/refs/tags/v#{version}.tar.gz"
   name "Unison"
