@@ -9,7 +9,6 @@ cask "unison" do
 
   depends_on macos: :sonoma
 
-
   installer script: {
     executable: "Unison-#{version}/Scripts/cask-install.sh"
   }
