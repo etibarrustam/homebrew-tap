@@ -1,13 +1,14 @@
 cask "unison" do
-  version "0.2.0"
-  sha256 "48dcf806953751c84ca5974aaebfdbc07735ecec07798186ff4e54c6c72b56f9"
+  version "0.2.1"
+  sha256 "b693af5a008de94874679dd2b43035a95439b0f10e6f8e45c9f6eebd75527279"
 
   url "https://github.com/etibarrustam/Unison/archive/refs/tags/v#{version}.tar.gz"
   name "Unison"
   desc "Play sound through every speaker at once, control volume and brightness everywhere"
   homepage "https://github.com/etibarrustam/Unison"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
+
 
   installer script: {
     executable: "Unison-#{version}/Scripts/cask-install.sh"
